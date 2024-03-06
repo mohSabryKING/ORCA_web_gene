@@ -1,0 +1,31 @@
+{% extends "home.html" %} {% block b0 %}href="{%url 'home'%}"{% endblock%}
+<br>{% block b2 %}href="{%url 'find_service'%}"{% endblock%}
+<br> {% block b3 %}href="{%url 'proj_type'%}"{% endblock%}
+<br>{% block b4 %}href="{%url 'emp_list'%}"{%endblock%} {% block b5 %}href="{%url 'add_user'%}"{% endblock%} {% block header_x %}
+
+
+
+<div class="main_cont">
+
+    <form action="" method="POST" class="form_model">
+        <h1 class="section-title">All Offers of this Service</h1>
+
+
+    </form>
+</div>
+{% endblock %}
+<br> {% block container_x %}
+<div class="div_data_1">
+    {% if x_offers%}
+    <div class="div_data">
+        {% for z in x_offers%}
+        <a href="{% url 'offer_item' s z.pk %}" class="btn_model">{{z.title}}</a> {% endfor %}
+    </div>
+    {{proj_x}} {% else %}
+    <h1>No data for {{proj_x}}</h1>
+    {% endif %}
+
+    <div class=""></div>
+</div>
+
+{% endblock container_x %}

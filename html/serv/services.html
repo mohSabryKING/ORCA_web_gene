@@ -1,0 +1,17 @@
+{% extends "home.html" %} {% block b0 %}href="{%url 'home'%}"{% endblock%}
+<br> {% block b2 %}href="{%url 'find_service'%}"{% endblock%}
+<br> {% block b3 %}href="{%url 'proj_type'%}"{% endblock%} {% block b4 %}href="{%url 'emp_list'%}"{%endblock%} {% block b5 %}href="{%url 'add_user'%}"{% endblock%}
+<br> {% block header_x %}
+
+
+<div class="main_cont">
+
+
+    <h1 class="section-title">Services</h1>
+
+</div>
+{% endblock %} {% block container_x %} {% for s in serv_list %}
+
+<a href="{% url 'serv_offers' s %}" class="btn_model_1">{{s}}</a> {% endfor %}
+<a href="" class="btn_model_1">all</a>
+<a href="{% url 'home' %}" class="btn_model_1">return to home</a> {% endblock container_x %}

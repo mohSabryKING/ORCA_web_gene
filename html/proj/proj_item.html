@@ -1,0 +1,29 @@
+{% extends "home.html" %} {% block b0 %}href="{%url 'home'%}"{% endblock%}
+<br>{% block b2 %}href="{%url 'find_service'%}"{% endblock%}
+<br> {% block b3 %}href="{%url 'proj_type'%}"{% endblock%}
+<br>{% block b4 %}href="{%url 'emp_type'%}"{%endblock%} {% block b5 %}href="{%url 'add_user'%}"{% endblock%} {% block header_x %}
+
+
+<div class="main_cont">
+    <style>
+        #hero {
+            height: 120vh;
+        }
+    </style>
+
+    <div class="div_data_1">
+
+        <h1>{{proj_y.name}}:{{proj_y.proj_type}}</h1>
+
+        {% if proj_y.proj_img.url %}
+
+        <img src="{{proj_y.proj_img.url}}" class="img_model_1" alt="see:{{proj_y.proj_link}}"> <br><br>{% else %}
+        <p>{{proj_y.bio}}</p>
+        <small>{{proj_y.added_in}}</small> {% endif %}
+        <a href="{{proj_y.proj_link}}" class="btn_model_1"> see details</a>
+
+
+        <a href="{% url 'home' %}" class="btn_model_1">back to home</a>
+    </div>
+</div>
+{% endblock %} {% block container_x %} {% endblock container_x %}

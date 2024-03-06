@@ -1,0 +1,19 @@
+{% extends "home.html" %} {% block b2 %}href="{%url 'find_service'%}"{% endblock%} {% block b3 %}href="{%url 'proj_type'%}"{% endblock%} {% block b4 %}href="{%url 'emp_list'%}"{%endblock%} {% block b5 %}href="{%url 'add_user'%}"{% endblock%}
+<br> {% block header_x %}
+
+
+<div class="main_cont">
+
+    <form action="" method="POST" class="form_model">
+        <h1 class="section-title">Logged out</h1>
+        <h3>You have been Logged out</h3>
+        <button type="submit" class="btn_model">Login</button>
+        <a href="{% url 'add_user' %}" class="btn_model">Register if new</a>
+
+        <div class="div50">
+
+        </div>
+
+    </form>
+</div>
+{% endblock %} {% block container_x %} {% endblock container_x %}

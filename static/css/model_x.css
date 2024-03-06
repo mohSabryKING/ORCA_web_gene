@@ -1,0 +1,53 @@
+body:not(.layout-fixed) .main-sidebar {
+    height: inherit;
+    min-height: 100%;
+    position: absolute;
+    top: 0;
+    background-color: #af0b0b;
+}
+
+.content-wrapper {
+    background-color: #571515;
+}
+
+.nav-sidebar .nav-item>.nav-link {
+    position: relative;
+    color: rgb(128, 0, 0);
+    background-color: white;
+}
+
+[class*=sidebar-dark-] .nav-header {
+    color: rgb(255, 255, 255);
+    margin-top: 1rem;
+}
+
+.card {
+    box-shadow: 0 0 1px rgb(0, 0, 0), 0 1px 3px rgba(0, 0, 0, .2);
+    background-color: #af0b0b;
+    margin-bottom: 1rem;
+}
+
+.m-0 {
+    margin: 0!important;
+    color: white;
+    text-align: center;
+}
+
+.sidebar-dark-primary .nav-sidebar>.nav-item>.nav-link.active,
+.sidebar-light-primary .nav-sidebar>.nav-item>.nav-link.active {
+    background-color: #ff000000;
+    color: #fff;
+    border: 5px solid white;
+    border-radius: 4px;
+}
+
+.accent-primary .btn-link,
+.accent-primary .nav-tabs .nav-link,
+.accent-primary a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link):not(.page-link):not(.btn) {
+    color: #ffffff;
+}
+
+.content-wrapper {
+    min-height: 758px;
+    width: 100%;
+}
